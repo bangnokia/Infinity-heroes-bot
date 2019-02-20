@@ -6,6 +6,7 @@ from matplotlib import pyplot as plt
 from pprint import pprint
 import pyautogui
 import threading
+import datetime
 
 need_detect = False
 ax = 375
@@ -116,7 +117,7 @@ def set_interval(func, sec):
     return t
 
 def bot():
-    pprint('Bot is running...')
+    pprint('Bot is running... ' +  str(datetime.datetime.now()))
     screen_shot()
     process_image()
     detect_captcha()
