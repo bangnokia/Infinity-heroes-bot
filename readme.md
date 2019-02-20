@@ -10,6 +10,9 @@ This requires python 3 and some packages:
 ## Check list
 
 [x] Make bot working
+
 [] Write installing documentation
+
 [] Move config outside the code
+
 [] Learn python, lmao
