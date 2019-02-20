@@ -15,6 +15,7 @@ game_height = 470
 
 
 def screen_shot():
+    pprint('Capture screen!')
     im1 = pyautogui.screenshot(region=(ax, ay, game_width, game_height))
     im1.save('capture.png')
 
@@ -33,6 +34,7 @@ def find_if_close(cnt1, cnt2):
 def process_image():
     global need_detect
 
+    pprint('Processing image...')
     img = cv2.imread('capture.png', 0)
     ret, thresh = cv2.threshold(img, 127, 255, 0)
     contours, hier = cv2.findContours(thresh, cv2.RETR_EXTERNAL, 2)
@@ -77,6 +79,7 @@ def process_image():
 
 def detect_captcha():
     if need_detect == False:
+        pprint('Captcha not detected!')
         return
 
     im = cv2.imread('processed.png', 0)
