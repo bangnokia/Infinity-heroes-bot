@@ -1,4 +1,4 @@
-# Infinity heros bot bypass captcha
+# Infinity heroes bot bypass captcha
 
 ## Introduction
 
