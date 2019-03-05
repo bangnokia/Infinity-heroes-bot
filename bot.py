@@ -15,7 +15,7 @@ need_detect = False
 ax = int(os.getenv('X1'))
 ay = int(os.getenv('Y1'))
 game_width = int(os.getenv('GAME_WIDTH'))
-game_height = int(os.getenv('GAME_WIDTH'))
+game_height = int(os.getenv('GAME_HEIGHT'))
 
 def screen_shot():
     pprint('Capture screen!')
