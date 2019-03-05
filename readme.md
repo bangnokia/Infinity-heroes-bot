@@ -17,9 +17,13 @@ Now you must manual calculate the coordinate for the script to know where is the
 - Create a file and name it `.env`, copy content from `.env.example` and fill your found variables above
 - Open `cmd` and cd to this directory, run `python bot.py` or `python3 bot.py`
 
+** Bonus **
+
+If you like auto click point in journey, you can use any auto click software to plus `attack` and `hp` in game, lmao. But remember set interval at least 7-10 seconds between clicks, and this bot will resolve your captcha as well.
+
 ## Check list
 
 - [x] Make bot working
 - [ ] Write installing documentation
-- [ ] Move config outside the code
+- [x] Move config outside the code
 - [ ] Learn python, lmao
