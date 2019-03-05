@@ -1,4 +1,3 @@
-import pyscreenshot as ps
 from PIL import Image
 import cv2
 import numpy as np
@@ -7,13 +6,16 @@ from pprint import pprint
 import pyautogui
 import threading
 import datetime
+import os
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
 
 need_detect = False
-ax = 375
-ay = 110
-game_width = 290
-game_height = 470
-
+ax = int(os.getenv('X1'))
+ay = int(os.getenv('Y1'))
+game_width = int(os.getenv('GAME_WIDTH'))
+game_height = int(os.getenv('GAME_WIDTH'))
 
 def screen_shot():
     pprint('Capture screen!')
