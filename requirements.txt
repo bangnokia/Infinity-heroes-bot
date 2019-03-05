@@ -1,0 +1,9 @@
+numpy
+matplotlib
+opencv-python
+pyobjc
+pyobjc-core
+pyautogui
+pprint
+pillow
+python-dotenv
