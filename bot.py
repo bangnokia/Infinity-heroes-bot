@@ -120,7 +120,7 @@ def set_interval(func, sec):
     return t
 
 def bot():
-    pprint('Bot is running... ' +  str(datetime.datetime.now()))
+    pprint(str(datetime.datetime.now()))
     screen_shot()
     process_image()
     detect_captcha()
