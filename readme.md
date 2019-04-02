@@ -15,6 +15,7 @@ Now you must manual calculate the coordinate for the script to know where is the
 - You have to find 4 variables: X1, Y1, GAME_WIDTH, GAME_HEIGHT (not the full height of the game, it doesn't include the instruction text of captcha)
 - At top left corner of screen it's point (0,0). You can use photoshop or any software to calculate it in pixel
 - Create a file and name it `.env`, copy content from `.env.example` and fill your found variables above
+- Set `INTERVAL_TIME` value = xx seconds (xx mean interval seconds between when this script check the captcha on the screen, should set 30 or 60 seconds)
 - Open `cmd` and cd to this directory, run `python bot.py` or `python3 bot.py`
 
 **Bonus**

@@ -16,6 +16,7 @@ ax = int(os.getenv('X1'))
 ay = int(os.getenv('Y1'))
 game_width = int(os.getenv('GAME_WIDTH'))
 game_height = int(os.getenv('GAME_HEIGHT'))
+interval_time = int(os.getenv('INTERVAL_TIME'))
 
 def screen_shot():
     pprint('Capture screen!')
@@ -125,7 +126,7 @@ def bot():
     detect_captcha()
 
 bot()
-set_interval(bot, 60)
+set_interval(bot, interval_time)
 
 
 
