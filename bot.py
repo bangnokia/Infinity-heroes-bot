@@ -86,9 +86,32 @@ def detect_captcha():
         pprint('Captcha not detected!')
         return
 
-    im = cv2.imread('processed.png', 0)
+
+    im = cv2.imread('processed.png', cv2.IMREAD_GRAYSCALE)
     im = cv2.bitwise_not(im)
-    detector = cv2.SimpleBlobDetector_create()
+
+    params = cv2.SimpleBlobDetector_Params()
+    # Change thresholds
+    params.minThreshold = 10
+    params.maxThreshold = 200
+
+    # Filter by Area.
+    params.filterByArea = False
+    params.minArea = 10
+
+    # Filter by Circularity
+    params.filterByCircularity = False
+    params.minCircularity = 0.1
+
+    # Filter by Convexity
+    params.filterByConvexity = False
+    params.minConvexity = 0.87
+
+    # Filter by Inertia
+    params.filterByInertia = False
+    params.minInertiaRatio = 0.01
+
+    detector = cv2.SimpleBlobDetector_create(params)
     keypoints = detector.detect(im)
 
     is_captcha = (len(keypoints) == 2)
